@@ -1,0 +1,12 @@
+## Install
+```
+git clone git@github.com:blacksadhorse/metric_client.git
+python setup.py install
+```
+
+## How to use
+```
+from metric_client import MetricClient
+metric = MetricClient(host='127.0.0.1')
+metric.push({'event': 'event'}, time.time())
+```

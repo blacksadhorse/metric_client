@@ -16,7 +16,7 @@ setup(
     url="http://blacksadhorse.com",
     packages=['metric_client'],
     install_requires=[
-
+        'zerorpc'
     ],
     include_package_data=True,
     long_description=read('README'),

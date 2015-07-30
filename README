@@ -7,6 +7,17 @@ python setup.py install
 ## How to use
 ```
 from metric_client import MetricClient
-metric = MetricClient(host='127.0.0.1')
-metric.push({'event': 'event'}, time.time())
+metric = MetricClient(host='127.0.0.1', port='13557')
+metric.push(
+  {
+    'rid': int(user_id), # required!
+    'cid': int(campaign_id), # required!
+    'account': str(mongo_account_id),
+    'event': 'event_name', # required!
+    'ms': int(mailstream_id),
+    'esp': int(mailstream_id),
+    'ttl': int(0), # if ttl
+  },
+  int(time.time())  # required!
+)
 ```
